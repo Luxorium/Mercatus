@@ -2,8 +2,9 @@ plugins {
     java
 }
 
-group = "zone.luxor"
+group = "dev.luxorium"
 version = "0.1.0"
+description = "A Folia-native player shops and trading plugin"
 
 repositories {
     mavenCentral()
@@ -22,13 +23,13 @@ tasks.withType<JavaCompile>().configureEach {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
-    testCompileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:26.1.2.build.+")
+    testCompileOnly("io.papermc.paper:paper-api:26.1.2.build.+")
     implementation("org.xerial:sqlite-jdbc:3.50.1.0")
 
     testImplementation(platform("org.junit:junit-bom:5.13.1"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
+    testRuntimeOnly("io.papermc.paper:paper-api:26.1.2.build.+")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

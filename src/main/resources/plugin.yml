@@ -1,7 +1,7 @@
 name: Mercatus
 version: ${version}
-main: zone.luxor.mercatus.MercatusPlugin
-api-version: '1.21'
+main: dev.luxorium.mercatus.MercatusPlugin
+api-version: '26.1.2'
 folia-supported: true
 authors:
   - Luxorium

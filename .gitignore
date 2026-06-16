@@ -1,8 +1,9 @@
 .gradle/
 .gradle-user-home/
 build/
-out/
-*.iml
-.idea/
-.vscode/
-*.log
+*.db
+*.db-shm
+*.db-wal
+run/
+libs/
+.claude/
