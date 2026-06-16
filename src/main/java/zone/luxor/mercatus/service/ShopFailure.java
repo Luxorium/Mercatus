@@ -1,0 +1,21 @@
+package zone.luxor.mercatus.service;
+
+public enum ShopFailure {
+    NONE,
+    NOT_PLAYER,
+    NO_PERMISSION,
+    INVALID_ARGUMENTS,
+    INVALID_PRICE,
+    INVALID_MODE,
+    WORLD_NOT_ALLOWED,
+    MODE_DISABLED,
+    BLOCK_NOT_CHEST,
+    ITEM_REQUIRED,
+    BLOCKED_ITEM,
+    MAX_SHOPS_REACHED,
+    SHOP_EXISTS,
+    SHOP_NOT_FOUND,
+    NOT_OWNER,
+    PAYMENT_FAILED,
+    STORAGE_ERROR
+}

@@ -1,0 +1,27 @@
+shop-creation-fee: 0
+transaction-tax-percent: 5.0
+max-shops-per-player: 25
+allow-buy-shops: true
+allow-sell-shops: true
+blocked-items:
+  - minecraft:bedrock
+  - minecraft:command_block
+allowed-worlds: []
+
+storage:
+  file: mercatus.db
+
+aureus:
+  enabled: true
+  require-for-transactions: true
+
+messages:
+  prefix: "<gold>Mercatus</gold><gray>:</gray> "
+  economy-unavailable: "Payments are unavailable because Aureus is not installed."
+  shop-created: "Shop created."
+  shop-removed: "Shop removed."
+  shop-not-found: "No Mercatus shop was found there."
+  invalid-price: "Price must be a positive whole minor-unit amount."
+  blocked-item: "That item cannot be sold in Mercatus shops."
+  max-shops: "You have reached your shop limit."
+  no-permission: "You do not have permission."

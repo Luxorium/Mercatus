@@ -1,0 +1,14 @@
+name: Mercatus
+version: ${version}
+main: zone.luxor.mercatus.MercatusPlugin
+api-version: '1.21'
+folia-supported: true
+authors:
+  - Luxorium
+description: Folia-native player shops and trading for the Luxor Zone SMP server network.
+website: https://github.com/Luxorium/Mercatus
+dependencies:
+  server:
+    Aureus:
+      load: OMIT
+      required: false

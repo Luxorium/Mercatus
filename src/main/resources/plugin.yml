@@ -1,0 +1,39 @@
+name: Mercatus
+version: ${version}
+main: zone.luxor.mercatus.MercatusPlugin
+api-version: '1.21'
+folia-supported: true
+authors:
+  - Luxorium
+description: Folia-native player shops and trading for the Luxor Zone SMP server network.
+website: https://github.com/Luxorium/Mercatus
+softdepend:
+  - Aureus
+commands:
+  mercatus:
+    description: Mercatus status and administration.
+    usage: /mercatus
+    permission: mercatus.command.shop
+  shop:
+    description: Create, manage, and inspect player shops.
+    usage: /shop <create|remove|info|list|limits|reload|admin>
+    permission: mercatus.command.shop
+permissions:
+  mercatus.command.shop:
+    default: true
+  mercatus.shop.create:
+    default: true
+  mercatus.shop.remove.own:
+    default: true
+  mercatus.shop.info:
+    default: true
+  mercatus.shop.list:
+    default: true
+  mercatus.admin.reload:
+    default: op
+  mercatus.admin.info:
+    default: op
+  mercatus.admin.remove:
+    default: op
+  mercatus.admin.list:
+    default: op
