@@ -4,7 +4,7 @@ plugins {
 
 group = "dev.luxorium"
 version = "0.1.0"
-description = "A Folia-native player shops and trading plugin"
+description = "Folia-native player shops and trading for Paper/Folia 26.1.2 Minecraft servers."
 
 repositories {
     mavenCentral()
@@ -36,7 +36,7 @@ dependencies {
 tasks.processResources {
     val props = mapOf("version" to project.version)
     inputs.properties(props)
-    filesMatching(listOf("plugin.yml", "paper-plugin.yml")) {
+    filesMatching("plugin.yml") {
         expand(props)
     }
 }

@@ -1,13 +1,13 @@
 # Contributing
 
-This project is intentionally strict about Folia safety, documentation, and
-small reviewable changes.
+Mercatus is part of the Luxorium plugin ecosystem. Keep changes focused,
+documented, and safe for Folia.
 
 ## Development Requirements
 
-- Java 25 or newer
-- Git
-- A local Paper or Folia 26.1.2 test server for behavior testing
+- Java 25 or newer.
+- Git.
+- A local Paper/Folia 26.1.2 test server for runtime testing.
 
 ## Build
 
@@ -20,19 +20,20 @@ The compiled jar is written to `build/libs/Mercatus-0.1.0.jar`.
 ## Pull Request Checklist
 
 - Keep changes focused on one behavior or documentation area.
-- Update `README.md` or `CHANGELOG.md` when user-facing behavior changes.
-- Add or update permissions in `plugin.yml` when adding commands.
+- Update `README.md`, `docs`, or `CHANGELOG.md` when user-facing behavior changes.
+- Add or update commands and permissions in `plugin.yml` when needed.
 - Run `./gradlew clean build` before opening a pull request.
-- Test shop behavior on Paper or Folia when changing runtime logic.
+- Test runtime behavior on Paper/Folia 26.1.2 when shop or listener behavior changes.
 
 ## Folia Safety
 
-Mercatus is Folia-native. Do not use legacy Bukkit scheduler APIs or direct
-cross-thread world/entity/inventory access.
+Do not add legacy `BukkitScheduler`, `BukkitRunnable`, or `runTask*` usage. Do
+not add unsafe cross-thread world, entity, player, or inventory access. See
+[Folia Safety](docs/FOLIA_SAFETY.md).
 
 ## Code Style
 
 - Use clear names and keep command classes focused.
-- Prefer existing services and helpers before adding new abstractions.
-- Keep database work asynchronous.
+- Prefer existing services and helpers before adding abstractions.
+- Keep blocking storage work away from region and entity threads.
 - Keep optional integrations behind provider abstractions.

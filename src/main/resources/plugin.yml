@@ -5,7 +5,7 @@ api-version: '26.1.2'
 folia-supported: true
 authors:
   - Luxorium
-description: Folia-native player shops and trading for the Luxor Zone SMP server network.
+description: Folia-native player shops and trading for Paper/Folia 26.1.2 Minecraft servers.
 website: https://github.com/Luxorium/Mercatus
 softdepend:
   - Aureus
