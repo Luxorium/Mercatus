@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-06-19
+
+### Changed
+
+- Refreshed release documentation for the current Luxorium plugin ecosystem.
+- Kept Java 25-compatible bytecode builds working on Java 25 or newer compilers.
+
+### Verified
+
+- Gradle tests and build pass on Java 26 while targeting Java 25 bytecode.
+
 ## [0.1.1] - 2026-06-19
 
 ### Fixed

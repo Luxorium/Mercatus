@@ -15,7 +15,7 @@ documented, and safe for Folia.
 ./gradlew clean build
 ```
 
-The compiled jar is written to `build/libs/Mercatus-0.1.1.jar`.
+The compiled jar is written to `build/libs/Mercatus-0.1.2.jar`.
 
 ## Pull Request Checklist
 

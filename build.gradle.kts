@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "dev.luxorium"
-version = "0.1.1"
+version = "0.1.2"
 description = "Folia-native player shops and trading for Paper/Folia 26.1.2 Minecraft servers."
 
 repositories {
