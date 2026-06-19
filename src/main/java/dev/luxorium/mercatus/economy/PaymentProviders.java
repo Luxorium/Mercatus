@@ -8,14 +8,18 @@ public final class PaymentProviders {
     private PaymentProviders() {
     }
 
-    public static PaymentProvider resolve(Server server, boolean aureusEnabled, Logger logger) {
+    public static PaymentProvider resolve(Server server, boolean aureusEnabled, boolean requireForTransactions, Logger logger) {
         if (!aureusEnabled) {
-            return new NoopPaymentProvider();
+            return fallback(requireForTransactions);
         }
         Plugin aureus = server.getPluginManager().getPlugin("Aureus");
         if (aureus == null || !aureus.isEnabled()) {
-            return new NoopPaymentProvider();
+            return fallback(requireForTransactions);
         }
         return AureusPaymentProvider.create(aureus, logger);
+    }
+
+    private static PaymentProvider fallback(boolean requireForTransactions) {
+        return requireForTransactions ? new NoopPaymentProvider() : new StandalonePaymentProvider();
     }
 }

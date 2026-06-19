@@ -13,7 +13,7 @@ storage:
 
 aureus:
   enabled: true
-  require-for-transactions: true
+  require-for-transactions: false
 
 messages:
   prefix: "<gold>Mercatus</gold><gray>:</gray> "

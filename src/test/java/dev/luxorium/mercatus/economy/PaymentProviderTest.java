@@ -20,4 +20,12 @@ final class PaymentProviderTest {
         NoopPaymentProvider provider = new NoopPaymentProvider();
         assertFalse(provider.transfer(UUID.randomUUID(), UUID.randomUUID(), 10L, "test").join().success());
     }
+
+    @Test
+    void standaloneProviderAllowsPositiveTransfersAndWithdrawals() {
+        StandalonePaymentProvider provider = new StandalonePaymentProvider();
+        assertFalse(provider.available());
+        assertTrue(provider.transfer(UUID.randomUUID(), UUID.randomUUID(), 10L, "standalone").join().success());
+        assertTrue(provider.withdraw(UUID.randomUUID(), 10L, "standalone").join().success());
+    }
 }

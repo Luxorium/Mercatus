@@ -30,7 +30,11 @@ public final class MercatusPlugin extends JavaPlugin {
         asyncExecutor = task -> getServer().getAsyncScheduler().runNow(this, scheduledTask -> task.run());
         Path databasePath = getDataFolder().toPath().resolve(mercatusConfig.storageFile());
         storage = new MercatusStorage(databasePath);
-        PaymentProvider paymentProvider = PaymentProviders.resolve(getServer(), mercatusConfig.aureusEnabled(), getLogger());
+        PaymentProvider paymentProvider = PaymentProviders.resolve(
+                getServer(),
+                mercatusConfig.aureusEnabled(),
+                mercatusConfig.aureusRequiredForTransactions(),
+                getLogger());
         shopService = new ShopService(storage, asyncExecutor, new ShopPolicy(), mercatusConfig, paymentProvider, getLogger());
 
         asyncExecutor.execute(() -> {
@@ -67,7 +71,11 @@ public final class MercatusPlugin extends JavaPlugin {
         reloadConfig();
         reloadMercatusConfig();
         if (shopService != null) {
-            PaymentProvider paymentProvider = PaymentProviders.resolve(getServer(), mercatusConfig.aureusEnabled(), getLogger());
+            PaymentProvider paymentProvider = PaymentProviders.resolve(
+                    getServer(),
+                    mercatusConfig.aureusEnabled(),
+                    mercatusConfig.aureusRequiredForTransactions(),
+                    getLogger());
             shopService.updateConfig(mercatusConfig, paymentProvider);
         }
     }

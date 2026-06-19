@@ -29,7 +29,7 @@ public record MercatusConfig(
                 configuration.getStringList("allowed-worlds").stream().collect(Collectors.toUnmodifiableSet()),
                 configuration.getString("storage.file", "mercatus.db"),
                 configuration.getBoolean("aureus.enabled", true),
-                configuration.getBoolean("aureus.require-for-transactions", true),
+                configuration.getBoolean("aureus.require-for-transactions", false),
                 configuration.getString("messages.prefix", "Mercatus: ")
         );
     }

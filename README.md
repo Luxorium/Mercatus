@@ -32,12 +32,12 @@ administration, and quality-of-life commands.
 | ----------- | ------- |
 | Java | 25 or newer |
 | Server | Paper/Folia 26.1.2 |
-| Mercatus | 0.1.0 |
+| Mercatus | 0.1.1 |
 | Optional integrations | Aureus 0.1.0 |
 
 ## Installation
 
-1. Download `Mercatus-0.1.0.jar` from the latest release.
+1. Download `Mercatus-0.1.1.jar` from the latest release.
 2. Place the jar in your server's `plugins/` directory.
 3. Optionally install Aureus for paid shop actions.
 4. Restart the server.
@@ -53,7 +53,7 @@ administration, and quality-of-life commands.
 The compiled plugin jar is written to:
 
 ```text
-build/libs/Mercatus-0.1.0.jar
+build/libs/Mercatus-0.1.1.jar
 ```
 
 ## Commands and Permissions

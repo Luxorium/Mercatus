@@ -19,6 +19,11 @@ first startup.
 Prices are minor-unit whole numbers so Mercatus can interoperate with economy
 providers without floating point currency loss.
 
+When `aureus.require-for-transactions` is `false`, Mercatus remains fully
+usable without Aureus by treating payment operations as standalone no-ops. When
+it is `true`, paid shop actions fail cleanly until Aureus is installed and
+enabled.
+
 ## Storage Dependency
 
 Mercatus bundles SQLite JDBC into the plugin jar intentionally. This keeps the

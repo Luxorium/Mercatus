@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-06-19
+
+### Fixed
+
+- Respect `aureus.require-for-transactions` when Aureus is absent or disabled.
+- Keep player shops usable in standalone mode by allowing no-op payments when economy enforcement is disabled.
+
+### Changed
+
+- Default new configurations to standalone shop transactions when Aureus is not installed.
+
 ### Changed
 
 - Standardized repository documentation, GitHub metadata, and CI configuration.
