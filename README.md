@@ -47,7 +47,7 @@ administration, and quality-of-life commands.
 ## Build From Source
 
 ```bash
-./gradlew clean build
+./gradlew clean test build
 ```
 
 The compiled plugin jar is written to:
